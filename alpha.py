@@ -1,3 +1,7 @@
+exeption_numbers = ['+97338301209', '+97366762845', '+966541444824', '+97366762840', '+97333284961',
+                    '+966551309290', '+97333243838'] #to add to
+
+
 from deep_translator import GoogleTranslator
 
 
