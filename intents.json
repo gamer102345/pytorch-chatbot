@@ -29,12 +29,12 @@
     {
       "tag": "thanks",
       "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Would you be interested in applying", "Looking forward to seeing you at meetings"]
+      "responses": ["Would you be interested in applying?", "Looking forward to seeing you at meetings!"]
     },
     {
       "tag": "no",
       "patterns": ["No Thank You", "I will be considering it"],
-      "responses": ["Thank you for inquiring", "Glad to have answered your questions"]
+      "responses": ["Thank you for inquiring", "Glad to have answered your questions!"]
     },
     {
       "tag": "yes",
@@ -49,7 +49,7 @@
       ],
       "responses": [
         "We offer 10 lessons",
-        ""
+        "----"
       ]
     },
     {
