@@ -1,12 +1,11 @@
-import googletrans as gt
+from deep_translator import GoogleTranslator
 
-transl = gt.Translator()
 
 def ara_en(src):
-    return transl.translate(text=src, dest='en', src='auto')
+    return GoogleTranslator(source='auto', target='en').translate(src)
 
 def en_ara(src):
-    return transl.translate(text=src, dest='ar', src='auto')
+    return GoogleTranslator(source='auto', target='ar').translate(src)
 
 inp = 'x' #placeholder
 english_alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
