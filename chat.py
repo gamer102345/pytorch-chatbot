@@ -49,6 +49,5 @@ while True:
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 print(f"{random.choice(intent['responses'])}") #TODO: when whatsapp connected do not use print
-    else:
-        #print(f"{bot_name}: I do not understand...")
+    else: #if the bot is having trouble responding to someone
         print("Let me forward this to a superior")
