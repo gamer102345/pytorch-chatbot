@@ -25,8 +25,8 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Sam"
-print("Let's chat! (type 'quit' to exit)")
+#bot_name = "Sam"
+#print("Let's chat! (type 'quit' to exit)") {no}
 while True:
     # sentence = "do you use credit cards?"
     sentence = input("You: ")
@@ -48,7 +48,7 @@ while True:
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                print(f"{random.choice(intent['responses'])}")
+                print(f"{random.choice(intent['responses'])}") #TODO: when whatsapp connected do not use print
     else:
         #print(f"{bot_name}: I do not understand...")
         print("Let me forward this to a superior")
