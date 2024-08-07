@@ -48,6 +48,7 @@ while True:
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                print(f"{bot_name}: {random.choice(intent['responses'])}")
+                print(f"{random.choice(intent['responses'])}")
     else:
-        print(f"{bot_name}: I do not understand...")
+        #print(f"{bot_name}: I do not understand...")
+        print("Let me forward this to a superior")
