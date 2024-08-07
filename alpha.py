@@ -20,3 +20,5 @@ else:
 
 #whatsapp api
 
+def texting(text):
+    import pywhatkit
