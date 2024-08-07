@@ -2,10 +2,12 @@ import googletrans as gt
 
 transl = gt.Translator()
 
-def ara_en(src):
-    return transl.translate(text=src, dest='en', src='auto')
+def ara_en(txt):
+    return transl.detect(txt)
 
-def en_ara(src):
-    return transl.translate(text=src, dest='ar', src='auto')
+def en_ara(txt):
+    return transl.translate(txt, dest='ar')
 
-print(en_ara('I love mangos in the summer'))
+print(ara_en('أنا أحب المانجو في الصيف'))
+
+#not working figure it out later

@@ -11,8 +11,8 @@
         "Good day"
       ],
       "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
+        "Hey",
+        "Hello",
         "Hi there, what can I do for you?",
         "Hi there, how can I help?"
       ]
@@ -29,18 +29,27 @@
     {
       "tag": "thanks",
       "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      "responses": ["Would you be interested in applying", "Looking forward to seeing you at meetings"]
     },
     {
-      "tag": "items",
+      "tag": "no",
+      "patterns": ["No Thank You", "I will be considering it"],
+      "responses": ["Thank you for inquiring", "Glad to have answered your questions"]
+    },
+    {
+      "tag": "yes",
+      "patterns": ["Yes Please", "I would like to purchase your courses", "Yes"],
+      "responses": ["Ok, let me forward you to a higher up", "A representative of the company will be contacting you shortly"]
+    },
+    {
+      "tag": "lessons",
       "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
+        "What lessons do you offer?",
+        "How many lessons do you offer?"
       ],
       "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
+        "We offer 10 lessons",
+        ""
       ]
     },
     {
@@ -49,35 +58,36 @@
         "Do you take credit cards?",
         "Do you accept Mastercard?",
         "Can I pay with Paypal?",
-        "Are you cash only?"
+        "How much are your courses?",
+        "How much are your classes?"
       ],
       "responses": [
         "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
+        "We accept most major credit cards, and Paypal",
+        "They are ____"
       ]
     },
     {
-      "tag": "delivery",
+      "tag": "time",
       "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
+        "How long do lessons take?",
+        "How long are zoom calls?",
+        "When do I start?"
       ],
       "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
+        "",
+        ""
       ]
     },
     {
-      "tag": "funny",
+      "tag": "help",
       "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
+        "How can PMP help me",
+        "What is PMP"
       ],
       "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
+        "----",
+        "-----"
       ]
     }
   ]

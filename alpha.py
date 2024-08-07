@@ -17,4 +17,6 @@ if english_alpha in inp:
 else:
     ara_en(inp)
     #do the ai stuff then return in arabic
-    en_ara(output)
+
+#whatsapp api
+
