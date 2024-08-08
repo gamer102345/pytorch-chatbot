@@ -4,4 +4,4 @@ translated = GoogleTranslator(source='auto', target='en').translate('أنا أح
 translated_1 = GoogleTranslator(source='auto', target='ar').translate('I love the world')
 print(translated_1)
 
-#will use selenium on useless pc to as server to run forever
+#will use selenium on useless pc as server to run forever
