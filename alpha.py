@@ -4,6 +4,13 @@ exeption_numbers = ['+97338301209', '+97366762845', '+966541444824', '+973667628
 
 from deep_translator import GoogleTranslator
 
+from train import tren
+from chat import chitter
+
+tren()
+
+#change this to use arabic if needed
+chitter()
 
 def ara_en(src):
     return GoogleTranslator(source='auto', target='en').translate(src)
