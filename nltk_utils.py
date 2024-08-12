@@ -1,6 +1,8 @@
 import numpy as np
 import nltk
-# nltk.download('punkt')
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
 
@@ -9,10 +11,8 @@ def tokenize(sentence):
     split sentence into array of words/tokens
     a token can be a word or punctuation character, or number
     """
-    nltk.download('punkt')
-    nltk.download('wordnet')
-    nltk.download('omw-1.4')
-    return nltk.word_tokenize(sentence)
+
+    return nltk.word_tokenize(sentence, language='english', preserve_line=True)
 
 
 def stem(word):
