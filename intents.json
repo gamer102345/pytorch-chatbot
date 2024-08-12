@@ -27,6 +27,13 @@
       ]
     },
     {
+      "tag": "ok",
+      "patterns": ["ok", "alright"],
+      "responses": [
+        ""
+      ]
+    },
+    {
       "tag": "thanks",
       "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
       "responses": ["Would you be interested in applying?", "Looking forward to seeing you at meetings!"]
