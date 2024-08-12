@@ -9,6 +9,9 @@ def tokenize(sentence):
     split sentence into array of words/tokens
     a token can be a word or punctuation character, or number
     """
+    nltk.download('punkt')
+    nltk.download('wordnet')
+    nltk.download('omw-1.4')
     return nltk.word_tokenize(sentence)
 
 
