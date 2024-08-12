@@ -87,6 +87,19 @@
       ]
     },
     {
+      "tag": "zoom",
+      "patterns": [
+        "How will we meet?",
+        "Where do I call you?",
+        "What internet factime service do you use?",
+        "What do you use for meetings?"
+      ],
+      "responses": [
+        "We use Zoom to meet with clients",
+        "We enjoy using the platform Zoom to give lessons to clients"
+      ]
+    },
+    {
       "tag": "help",
       "patterns": [
         "How can PMP help me",
