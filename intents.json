@@ -64,7 +64,7 @@
       "responses": [
         "We accept VISA, Mastercard and Paypal",
         "We accept most major credit cards, and Paypal",
-        "They are ____"
+        "Courses are 2000 SAR for 10 courses"
       ]
     },
     {
@@ -75,8 +75,8 @@
         "When do I start?"
       ],
       "responses": [
-        "",
-        ""
+        "Lessons usually take between 1-2 hours on zoom",
+        "You can begin today if you would like"
       ]
     },
     {
@@ -86,8 +86,9 @@
         "What is PMP"
       ],
       "responses": [
-        "----",
-        "-----"
+        "PMP can help you develop your business",
+        "PMP can show you how to organize your business and create efficient business practices",
+        "PMP is most useful to those aspiring to follow a career in business, however it can be useful to those working in any corporation"
       ]
     }
   ]
