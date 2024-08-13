@@ -1,4 +1,4 @@
-def chitter():
+def chitter(chat):
     import random
     import json
 
@@ -26,29 +26,25 @@ def chitter():
     model.load_state_dict(model_state)
     model.eval()
 
-    #bot_name = "Sam"
-    #print("Let's chat! (type 'quit' to exit)") {no}
-    while True:
-        # sentence = "do you use credit cards?"
-        sentence = input("You: ")
-        if sentence == "quit":
-            break
+    sentence = chat #input from messager
+    if sentence == "quit":
+        return 0 #break
 
-        sentence = tokenize(sentence)
-        X = bag_of_words(sentence, all_words)
-        X = X.reshape(1, X.shape[0])
-        X = torch.from_numpy(X).to(device)
+    sentence = tokenize(sentence)
+    X = bag_of_words(sentence, all_words)
+    X = X.reshape(1, X.shape[0])
+    X = torch.from_numpy(X).to(device)
 
-        output = model(X)
-        _, predicted = torch.max(output, dim=1)
+    output = model(X)
+    _, predicted = torch.max(output, dim=1)
 
-        tag = tags[predicted.item()]
+    tag = tags[predicted.item()]
 
-        probs = torch.softmax(output, dim=1)
-        prob = probs[0][predicted.item()]
-        if prob.item() > 0.75:
-            for intent in intents['intents']:
-                if tag == intent["tag"]:
-                    print(f"{random.choice(intent['responses'])}") #TODO: when whatsapp connected do not use print
-        else: #if the bot is having trouble responding to someone
-            print("Let me forward this to a superior")
+    probs = torch.softmax(output, dim=1)
+    prob = probs[0][predicted.item()]
+    if prob.item() > 0.75:
+        for intent in intents['intents']:
+            if tag == intent["tag"]:
+                return f"{random.choice(intent['responses'])}" 
+    else: #if the bot is having trouble responding to someone
+        return "Let me forward this to a superior"
