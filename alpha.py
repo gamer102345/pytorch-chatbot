@@ -58,3 +58,4 @@ for f in finder:
 
 #now read their texts
 
+finder_1 = driver.find_element("xpath", "//div[contains(@class, '_akbu')]") #check copyable text
