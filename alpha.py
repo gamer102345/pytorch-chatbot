@@ -33,6 +33,7 @@ driver.get("https://web.whatsapp.com")
 
 driver.minimize_window()
 
+global finder
 finder = driver.find_element("xpath", "//div[contains(@class, '_aou8 _aj_h')]")
 
 numbers = []
@@ -48,6 +49,9 @@ def read_and_write(number):
 
     #now read their texts
     while True:
+        for f in finder:
+            if f'{number}' in f.get_attribute('innerHTML'):
+                f.click()
         #should be a number in numbers [should be part of the threads of functions]
         finder_1 = driver.find_element("xpath", f"//div[contains(@class, 'x9f619 x1hx0egp x1yrsyyn x1ct7el4 x1dm7udd xwib8y2')][.//div[text()[contains(., '{number}')]][.//div[contains(@class, '_akbar')]]") 
 
