@@ -21,10 +21,7 @@ def ara_en(src):
 def en_ara(src):
     return GoogleTranslator(source='auto', target='ar').translate(src)
 
-inp = 'x' #placeholder
 english_alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
-
 
 #whatsapp api
 
@@ -65,7 +62,7 @@ def read_and_write(number):
         from pywhatkit import whats
 
         for text in finder_1:
-            if english_alpha in inp:
+            if english_alpha in text:
                 #return ai stuff in english
                 response = chitter(text) #should enter it into the ai
                 if text in ending:
@@ -74,7 +71,7 @@ def read_and_write(number):
                     return 1
                 whats.sendwhatmsg_instantly(number, response) #TODO: change numbers
             else:
-                arabic_to_eng = ara_en(inp)
+                arabic_to_eng = ara_en(text)
                 response_0 = chitter(arabic_to_eng)
                 reponse_1 = en_ara(response_0)
                 if text in ending:
