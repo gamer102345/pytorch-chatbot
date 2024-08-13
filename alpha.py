@@ -46,3 +46,15 @@ driver.get("https://web.whatsapp.com")
 
 driver.minimize_window()
 
+finder = driver.find_element("xpath", "//div[contains(@class, '_aou8 _aj_h')]")
+
+numbers = []
+
+for f in finder:
+    if f is int:
+        numbers.append(f)
+
+#run script AI for each number
+
+#now read their texts
+
