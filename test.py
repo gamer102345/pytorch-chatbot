@@ -6,14 +6,22 @@ from webdriver_manager.chrome import ChromeDriverManager
 options = Options()
 options.add_experimental_option("detach", True)
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+options = webdriver.ChromeOptions()
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 driver.get("https://web.whatsapp.com")
 
 driver.minimize_window()
-
-finder = driver.find_element("xpath", "//div[contains(@class, '_aou8 _aj_h')]")
+while True:
+    try:
+        finder = driver.find_element("xpath", "//div[contains(@class, '_aou8 _aj_h')]")
+        break
+    except:
+        pass
 
 for x in finder:
     if 'Momma' in x.get_attribute('InnerHTML'):
         x.click()
+
+driver.close()
