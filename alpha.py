@@ -10,6 +10,8 @@ from chat import chitter
 tren()
 
 #change this to use arabic if needed
+
+#this should be in a while loop
 chitter()
 
 def ara_en(src):
@@ -31,7 +33,16 @@ else:
 #whatsapp api
 
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+options = Options()
+options.add_experimental_option("detach", True)
+
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
+driver.get("https://web.whatsapp.com")
+
+driver.minimize_window()
 
