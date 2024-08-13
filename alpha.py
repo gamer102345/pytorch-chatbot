@@ -4,7 +4,6 @@ exeption_numbers = ['+97338301209', '+97366762845', '+966541444824', '+973667628
 
 import concurrent.futures.thread
 from deep_translator import GoogleTranslator
-import pywhatkit.whats
 
 from train import tren
 from chat import chitter
