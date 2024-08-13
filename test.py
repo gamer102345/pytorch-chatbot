@@ -1,7 +1,19 @@
-from deep_translator import GoogleTranslator
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 
-translated = GoogleTranslator(source='auto', target='en').translate('أنا أحب العالم')
-translated_1 = GoogleTranslator(source='auto', target='ar').translate('I love the world')
-print(translated_1)
+options = Options()
+options.add_experimental_option("detach", True)
 
-#will use selenium on useless pc as server to run forever
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
+driver.get("https://web.whatsapp.com")
+
+driver.minimize_window()
+
+finder = driver.find_element("xpath", "//div[contains(@class, '_aou8 _aj_h')]")
+
+for x in finder:
+    if 'Momma' in x.get_attribute('InnerHTML'):
+        x.click()
